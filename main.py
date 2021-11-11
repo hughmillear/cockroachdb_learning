@@ -16,7 +16,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_cockroachdb import run_transaction
 
+from typing import List
 from models import Account
+import schemas
 
 # The code below inserts new accounts.
 
@@ -110,7 +112,7 @@ if __name__ == '__main__':
         print('Failed to connect to database.')
         print('{0}'.format(e))
 
-    seen_account_ids = []
+    seen_account_ids: List[schemas.Account] = []
 
     run_transaction(sessionmaker(bind=engine),
                     lambda s: create_accounts(s, 100))

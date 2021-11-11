@@ -12,13 +12,13 @@ mkdir -p /usr/local/lib/cockroach
 cp -i cockroach-v21.1.11.linux-amd64/lib/libgeos.so /usr/local/lib/cockroach/
 cp -i cockroach-v21.1.11.linux-amd64/lib/libgeos_c.so /usr/local/lib/cockroach/
 which cockroach
-\# /usr/local/bin/cockroach
+# /usr/local/bin/cockroach
 cockroach demo
 SELECT ST_IsValid(ST_MakePoint(1,2));
-\#   st_isvalid
-\# --------------
-\# true
-\# (1 row)
+#   st_isvalid
+# --------------
+# true
+# (1 row)
 ```
 
 ## Steps
@@ -29,3 +29,4 @@ SELECT ST_IsValid(ST_MakePoint(1,2));
 cockroach start-single-node --advertise-addr 'localhost' --insecure
 ```
 
+## Forgot to document everything else...

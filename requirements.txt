@@ -1,3 +1,10 @@
 psycopg2-binary
 sqlalchemy
 sqlalchemy-cockroachdb
+
+# fastapi requirements
+fastapi[all]>=0.70.0,<0.71.0
+uvicorn[standard]==0.15.0
+gunicorn==20.1.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
